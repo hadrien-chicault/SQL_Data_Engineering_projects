@@ -100,14 +100,16 @@ FROM job_postings_fact
 WHERE company_id NOT IN (
         SELECT company_id
         FROM company_dim
-    );
+    )
+UNION ALL
 SELECT 'Orphaned skill_ids in skills_job_dim' AS check_type,
     COUNT(*) AS orphaned_count
 FROM skills_job_dim
 WHERE skill_id NOT IN (
         SELECT skill_id
         FROM skills_dim
-    );
+    )
+UNION ALL
 SELECT 'Orphaned job_ids in skills_job_dim' AS check_type,
     COUNT(*) AS orphaned_count
 FROM skills_job_dim
