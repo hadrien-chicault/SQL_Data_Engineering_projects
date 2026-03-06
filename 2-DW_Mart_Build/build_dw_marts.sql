@@ -5,3 +5,5 @@
 .read 02_load_schema_dw.sql
 -- Step 3: Mart - Cret=ate flat mart
 .read 03_create_flat_mart.sql
+
+.read 04_create_skills_mart.sql
