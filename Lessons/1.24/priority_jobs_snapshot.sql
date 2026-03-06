@@ -83,6 +83,6 @@ SELECT job_title_short,
     COUNT(*) AS job_count,
     MIN(priority_lvl) AS priority_lvl,
     MIN(updated_at) AS updated_at
-FROM src_priority_jobs
+FROM src_priority_jobsa
 GROUP BY job_title_short
 ORDER BY job_count DESC;
